@@ -1,0 +1,11 @@
+p {
+  font-family: Lato;
+}
+
+.active{
+  color : green;
+}
+
+.inactive{
+  color :red;
+}

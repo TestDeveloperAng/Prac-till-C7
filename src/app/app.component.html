@@ -1,0 +1,28 @@
+<!-- <hello name="{{ name }}"></hello>
+<p>
+  Start editing to see some magic happen :)
+</p> -->
+<!-- 
+<p appBasicHighlight>Styled using Basic HighLight</p>
+
+<p appBetterhighlight [default]="'lightblue'" [highlight]="'lightgreen'">Styled using better HighLight</p> -->
+
+<div *ngFor="let server of servers">
+  <div *ngIf="serveractive === true; else inactive">
+    <div class="panel panel-default panel-success">
+      <div class="panel-heading" [ngClass]="serveractive ===  true ? 'active' : 'inactive'">Server is :- {{server.name}}</div>
+      <div class="panel-body">Ping is :- {{server.ping}}</div>
+    </div>
+  </div>
+
+  <ng-template #inactive>
+    <p [ngStyle]="{color : serveractive === false ? 'red' : 'green'}">Server is Inactive</p>
+  </ng-template>
+  
+
+  <div [ngSwitch]="value">
+    <p *ngSwitchCase="1">Value is 1</p>
+    <p *ngSwitchCase="10">Value is 10</p>
+  </div>
+
+</div>
